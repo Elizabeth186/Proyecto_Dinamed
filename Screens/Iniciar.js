@@ -1,9 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Iniciar() {
   return (
-    <View><Text>Iniciar</Text></View>
+    <View style={styles.container}>
+        <Text>Correo</Text>
+        <TextInput placeholder='Ejemplo@gmail.com'></TextInput>
+
+        <Text>Contraseña</Text>
+        <TextInput placeholder='*********'></TextInput>
+       
+        <Text>Repita su Contraseña</Text>
+        <TextInput placeholder='*********'></TextInput>
+       
+       
+        
+    </View>
   );
 }
 
