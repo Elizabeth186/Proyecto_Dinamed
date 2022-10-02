@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Iniciar from './Screens/Iniciar';
 
-export default function App() {
+export default function Iniciar() {
   return (
-    <Iniciar></Iniciar>
+    <View><Text>Iniciar</Text></View>
   );
 }
 
