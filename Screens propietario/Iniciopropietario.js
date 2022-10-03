@@ -5,7 +5,7 @@ import {LinearGradient} from 'expo-linear-gradient';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function Iniciar() {
+export default function Iniciarpropietario() {
   return (
     
     <View style={styles.container}>
@@ -25,10 +25,6 @@ export default function Iniciar() {
 
        </LinearGradient>
      
-      <Text style={styles.txtnotengo}>¿No posees una cuenta?</Text>
-      <TouchableOpacity  style={styles.btnregistro}><Text  style={styles.txt}> Regristrarme</Text></TouchableOpacity>
-      
-
         </SafeAreaView>
     </View>
   );
@@ -80,18 +76,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color:'white',
     padding: 11
-  },
-  txt:{
-color:'#368DD9',
-fontWeight:'bold',
-fontSize:16,
-padding:20,
-textAlign:'center'
-  },
-  txtnotengo:{
-    textAlign: 'center',
-    fontSize: 14,
-    marginTop: '5%',
   }
   
 });
