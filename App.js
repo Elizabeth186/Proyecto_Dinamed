@@ -4,10 +4,15 @@ import Iniciarpropietario from './Screens propietario/Iniciopropietario';
 import Home from './Screens/Home';
 import Iniciar from './Screens/Inicio';
 import Registro from './Screens/Registro';
+import Carrito from './Screens/Carrito';
+import Historial from './Screens/Historial';
+import DetallesProducto from './Screens/DetallesProducto';
+
+
 
 export default function App() {
   return (
-  <Iniciarpropietario></Iniciarpropietario>
+  <DetallesProducto></DetallesProducto>
   );
 }
 
