@@ -2,17 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Iniciarpropietario from './Screens propietario/Iniciopropietario';
 import Home from './Screens/Home';
-import Iniciar from './Screens/Inicio';
-import Registro from './Screens/Registro';
 import Carrito from './Screens/Carrito';
 import Historial from './Screens/Historial';
 import DetallesProducto from './Screens/DetallesProducto';
+import Accesos from './Screens/Accesos';
 
 
 
 export default function App() {
   return (
-  <DetallesProducto></DetallesProducto>
+ <Accesos></Accesos>
   );
 }
 
