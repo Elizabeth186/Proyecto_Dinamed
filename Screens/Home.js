@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View , Image, Dimensions, TextInput, TouchableOpacity} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient';
+import {useNavigation} from '@react-navigation/native'
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default function Home() {
+  const navigation = useNavigation();
   return (
   <View style={styles.container}>
     <SafeAreaView>
