@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import 'firebase/compat/storage';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyASuEl2S63oZZ8PZCjgvhPhG5XBUbH3G2w",
@@ -10,3 +11,9 @@ export const firebaseConfig = {
   messagingSenderId: "965459203131",
   appId: "1:965459203131:web:2c16e132a80923de50b81e"
 };
+
+if(!firebase.app.length) {
+  firebase.initializeApp(firebaseConfig);
+
+}
+export {firebase};
