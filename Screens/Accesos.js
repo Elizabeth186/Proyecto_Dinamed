@@ -10,7 +10,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {useNavigation} from '@react-navigation/native'
 import Home from './Home';
-import { validadoemail, validandocontraseña } from '../validaciones/validacion';
+import { validadoemail, validandocontraseña, validandoemailpropietario } from '../validaciones/validacion';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -36,6 +36,26 @@ function Iniciar(){
       setError("Existen campos vacios")
     } else if(!validadoemail(email)) {
       setError("Email incorrecto o no registrado")
+    } else {
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    console.log('Sesion Iniciada!'+email)
+    const user = userCredential.user;
+    console.log(user);
+    navigation.navigate('Home')
+    })
+    .catch(error =>{
+      console.log(error);
+      setError("Usuario no registrado o contraña incorrecta")
+    })}
+  }
+
+  const handleSignInpro = ()=>{
+
+    if(isEmpty(email) || isEmpty(password) ){
+      setError("Existen campos vacios")
+    }else if(!validandoemailpropietario(email)){
+      setError("Este email no pertenece a un administrador")
     } else {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -101,7 +121,15 @@ function Iniciar(){
       <Text style={styles.textbtn2}>Registrarme</Text>
     </View>
                     </LinearGradient></TouchableOpacity>
+
       
+                    <TouchableOpacity onPress={handleSignInpro}>
+       <LinearGradient colors={['#368DD9','#082359']}  start={[0, 0.5]}
+                  end={[1, 0.5]} style={styles.btnstyle2}>
+                     <View style={styles.circleGradient}>
+      <Text style={styles.textbtn2}>Iniciar como administrador</Text>
+    </View>
+                    </LinearGradient></TouchableOpacity>
 
         </SafeAreaView>
     </View>

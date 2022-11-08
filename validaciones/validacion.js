@@ -15,3 +15,15 @@ export const validandocontraseña = (text) => {
         return true;
     }
 }
+
+export const validandoemailpropietario = (text) =>{
+
+   let emailp = /^jorge@gmail.com$/
+   
+    if(emailp.test(text) === false){
+        return false;
+      }else {
+            return true;
+        }
+    }
+
