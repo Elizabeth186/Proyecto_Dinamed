@@ -5,7 +5,7 @@ import {LinearGradient} from 'expo-linear-gradient';
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {initializeApp} from 'firebase/app';
 import {isEmpty} from 'lodash';
-import { firebaseConfig } from '../db/firebase';
+import { firebaseConfig } from '../db/firebaseaccesos';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {useNavigation} from '@react-navigation/native'
